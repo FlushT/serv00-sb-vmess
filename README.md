@@ -1,4 +1,4 @@
-bash <(curl -Ls https://raw.githubusercontent.com/FlushT/serv00-sing-box-vmess/main/install_serv00_vmess.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/FlushT/serv00-sb-vmess/main/install_serv00_vmess.sh)
 
 (crontab -l; echo "*/12 * * * * pgrep -x "web" > /dev/null || nohup /home/${USER}/.vmess/web run -c /home/${USER}/.vmess/config.json >/dev/null 2>&1 &") | crontab -
 
