@@ -142,9 +142,9 @@ EOF
 download_singbox() {
   ARCH=$(uname -m) && DOWNLOAD_DIR="." && mkdir -p "$DOWNLOAD_DIR" && FILE_INFO=()
   if [ "$ARCH" == "arm" ] || [ "$ARCH" == "arm64" ] || [ "$ARCH" == "aarch64" ]; then
-      FILE_INFO=("https://github.com/FlushT/serv00-sb-vmess/releases/download/1.0.0/arm-sing-box web" "https://github.com/FlushT/serv00-sb-vmess/releases/download/1.0.0/arm-cloudflace bot")
+      FILE_INFO=("https://github.com/flusht/serv00-sb-vmess/releases/download/1.0.0/arm-sing-box web" "https://github.com/flusht/serv00-sb-vmess/releases/download/1.0.0/arm-cloudflace bot")
   elif [ "$ARCH" == "amd64" ] || [ "$ARCH" == "x86_64" ] || [ "$ARCH" == "x86" ]; then
-      FILE_INFO=("https://github.com/FlushT/serv00-sb-vmess/releases/download/1.0.0/amd64-sing-box web" "https://github.com/FlushT/serv00-sb-vmess/releases/download/1.0.0/amd64-cloudflace bot")
+      FILE_INFO=("https://github.com/flusht/serv00-sb-vmess/releases/download/1.0.0/amd64-sing-box web" "https://github.com/flusht/serv00-sb-vmess/releases/download/1.0.0/amd64-cloudflace bot")
   else
       echo "Unsupported architecture: $ARCH"
       exit 1
