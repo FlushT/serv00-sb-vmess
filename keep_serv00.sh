@@ -11,7 +11,7 @@ re="\033[0m"
 echo ""
 purple "=== serv00 | 一键保活脚本 ===\n"
 
-base_url="https://raw.githubusercontent.com/FlushT"
+base_url="https://raw.githubusercontent.com/flusht"
 
 # 发送 Telegram 消息的函数
 send_telegram_message() {
