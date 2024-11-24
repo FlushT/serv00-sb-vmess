@@ -3,6 +3,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/FlushT/serv00-sb-vmess/main/in
 (crontab -l; echo "*/12 * * * * pgrep -x "web" > /dev/null || nohup /home/${USER}/.vmess/web run -c /home/${USER}/.vmess/config.json >/dev/null 2>&1 &") | crontab -
 
 <ARGO_AUTH> = token
+
 (crontab -l; echo "*/12 * * * * pgrep -x "bot" > /dev/null || nohup /home/${USER}/.vmess/bot tunnel --edge-ip-version auto --no-autoupdate --protocol http2 run --token <ARGO_AUTH> >/dev/null 2>&1 &") | crontab -
 
 crontab -l
@@ -14,6 +15,7 @@ keep_serv00.yml
 Settings > Secrets and variables > Actions > Secrets
 
 SSH_ACCOUNTS 
+
 [
   {"ip": "s13.serv00.com", "username": "test", "password": "tzCOu"},
   {"ip": "s13.serv00.com", "username": "abc", "password": "yTev"}
