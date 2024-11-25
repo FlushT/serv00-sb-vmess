@@ -5,7 +5,7 @@ pgrep -x "web" > /dev/null
 
 # 如果没有运行，则启动 vmess
 if [ $? -ne 0 ]; then
-    nohup /home/${USER}/.vmess/web run -c /home/${USER}/.vmess/config.json >/dev/null 2>&1 &
+    pgrep -x web > /dev/null nohup /home/${USER}/.vmess/web run -c /home/${USER}/.vmess/config.json >/dev/null 2>&1 &
 fi
 
 
