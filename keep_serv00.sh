@@ -66,8 +66,7 @@ get_script_url() {
     case $1 in
         vmess) echo "${base_url}/Serv00-sb-vmess/main/restart_vmess.sh" ;;
         nezha-dashboard) echo "${base_url}/Serv00-sb-vmess/main/restart_dashboard.sh" ;;
-		nezha-agent) echo "${base_url}/Serv00-sb-vmess/main/restart_agent.sh" ;;
-        x-ui) echo "${base_url}/Serv00-sb-vmess/main/restart_x_ui.sh" ;;
+	nezha-agent) echo "${base_url}/Serv00-sb-vmess/main/restart_agent.sh" ;;
     esac
 }
 
