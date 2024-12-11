@@ -141,9 +141,9 @@ EOF
 download_singbox() {
   ARCH=$(uname -m) && DOWNLOAD_DIR="." && mkdir -p "$DOWNLOAD_DIR" && FILE_INFO=()
   if [ "$ARCH" == "arm" ] || [ "$ARCH" == "arm64" ] || [ "$ARCH" == "aarch64" ]; then
-      FILE_INFO=("https://github.com/flusht/serv00-sb-vmess/releases/download/1.0.0/arm-sing-box web" "https://github.com/flusht/serv00-sb-vmess/releases/download/1.0.0/arm-cloudflace bot")
+      FILE_INFO=("https://github.com/FlushT/serv00-sb-vmess/releases/download/1.0.0/arm-sing-box web" "https://github.com/FlushT/serv00-sb-vmess/releases/download/1.0.0/arm-cloudflace bot")
   elif [ "$ARCH" == "amd64" ] || [ "$ARCH" == "x86_64" ] || [ "$ARCH" == "x86" ]; then
-      FILE_INFO=("https://github.com/flusht/serv00-sb-vmess/releases/download/1.0.0/amd64-sing-box web" "https://github.com/flusht/serv00-sb-vmess/releases/download/1.0.0/amd64-cloudflace bot")
+      FILE_INFO=("https://github.com/FlushT/serv00-sb-vmess/releases/download/1.0.0/amd64-sing-box web" "https://github.com/FlushT/serv00-sb-vmess/releases/download/1.0.0/amd64-cloudflace bot")
   else
       echo "Unsupported architecture: $ARCH"
       exit 1
@@ -408,7 +408,7 @@ menu() {
    echo   "==========================="
    red    "0.Exit"
    echo   "==========================="
-   reading "请输入选择(0-3): " choice
+   reading "Please enter a selection (0-3):" choice
    echo ""
    case "${choice}" in
         1) install_singbox ;;
@@ -416,7 +416,7 @@ menu() {
         3) cat $WORKDIR/list.txt ;; 
 	    4) kill_all_tasks ;;
         0) exit 0 ;;
-        *) red "无效的选项，请输入 0 到 3" ;;
+        *) red "For invalid options, enter 0 through 3" ;;
    esac
 }
 menu
