@@ -41,7 +41,6 @@ reading "\n确定继续安装吗？【y/n】: " choice
   case "$choice" in
     [Yy])
         cd $WORKDIR
-        read_nz_variables
         read_vmess_port
         reading "请输入VMess的UUID（留空将使用默认UUID）: " input_uuid
         if [ -z "$input_uuid" ]; then
